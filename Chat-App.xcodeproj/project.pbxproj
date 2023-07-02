@@ -21,6 +21,12 @@
 		F28ED1962A4DDEA10029236F /* RoomsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28ED1952A4DDEA10029236F /* RoomsVC.swift */; };
 		F28ED19A2A4DE32E0029236F /* ChatRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28ED1992A4DE32E0029236F /* ChatRoomVC.swift */; };
 		F28ED19C2A4DF3180029236F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F28ED19B2A4DF3170029236F /* GoogleService-Info.plist */; };
+		F2AAEBD12A5077C60097C9CA /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AAEBD02A5077C60097C9CA /* UIViewExt.swift */; };
+		F2AAEBD32A508D740097C9CA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AAEBD22A508D740097C9CA /* LoginVC.swift */; };
+		F2AAEBD52A50D2A20097C9CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AAEBD42A50D2A20097C9CA /* User.swift */; };
+		F2AAEBD72A50D5BB0097C9CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AAEBD62A50D5BB0097C9CA /* Constants.swift */; };
+		F2AAEBD92A50E0F40097C9CA /* FCollectionRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AAEBD82A50E0F40097C9CA /* FCollectionRef.swift */; };
+		F2AAEBDC2A50E2F20097C9CA /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AAEBDB2A50E2F20097C9CA /* FirebaseUserListener.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,12 @@
 		F28ED1952A4DDEA10029236F /* RoomsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsVC.swift; sourceTree = "<group>"; };
 		F28ED1992A4DE32E0029236F /* ChatRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomVC.swift; sourceTree = "<group>"; };
 		F28ED19B2A4DF3170029236F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F2AAEBD02A5077C60097C9CA /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		F2AAEBD22A508D740097C9CA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F2AAEBD42A50D2A20097C9CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F2AAEBD62A50D5BB0097C9CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F2AAEBD82A50E0F40097C9CA /* FCollectionRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionRef.swift; sourceTree = "<group>"; };
+		F2AAEBDB2A50E2F20097C9CA /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +106,8 @@
 		F28ED1732A4DA2310029236F /* Chat-App */ = {
 			isa = PBXGroup;
 			children = (
-				F28ED19B2A4DF3170029236F /* GoogleService-Info.plist */,
+				F2AAEBCF2A5077A70097C9CA /* Extensions */,
+				F2AAEBDA2A50E2810097C9CA /* FirebaseHelpers */,
 				F28ED18C2A4DDDBA0029236F /* Models */,
 				F28ED18B2A4DDDAF0029236F /* Views */,
 				F28ED18A2A4DDDA40029236F /* Controllers */,
@@ -104,6 +117,7 @@
 				F28ED17D2A4DA2340029236F /* Assets.xcassets */,
 				F28ED17F2A4DA2340029236F /* LaunchScreen.storyboard */,
 				F28ED1822A4DA2340029236F /* Info.plist */,
+				F28ED19B2A4DF3170029236F /* GoogleService-Info.plist */,
 			);
 			path = "Chat-App";
 			sourceTree = "<group>";
@@ -114,6 +128,8 @@
 				F28ED1782A4DA2310029236F /* FormVC.swift */,
 				F28ED1952A4DDEA10029236F /* RoomsVC.swift */,
 				F28ED1992A4DE32E0029236F /* ChatRoomVC.swift */,
+				F2AAEBD22A508D740097C9CA /* LoginVC.swift */,
+				F2AAEBD62A50D5BB0097C9CA /* Constants.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -132,8 +148,26 @@
 			children = (
 				F28ED18D2A4DDDE20029236F /* Room.swift */,
 				F28ED18F2A4DDE030029236F /* Message.swift */,
+				F2AAEBD42A50D2A20097C9CA /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F2AAEBCF2A5077A70097C9CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F2AAEBD02A5077C60097C9CA /* UIViewExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F2AAEBDA2A50E2810097C9CA /* FirebaseHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				F2AAEBD82A50E0F40097C9CA /* FCollectionRef.swift */,
+				F2AAEBDB2A50E2F20097C9CA /* FirebaseUserListener.swift */,
+			);
+			path = FirebaseHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,12 +286,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2AAEBD32A508D740097C9CA /* LoginVC.swift in Sources */,
 				F28ED1792A4DA2310029236F /* FormVC.swift in Sources */,
 				F28ED1962A4DDEA10029236F /* RoomsVC.swift in Sources */,
+				F2AAEBD12A5077C60097C9CA /* UIViewExt.swift in Sources */,
 				F28ED1922A4DDE350029236F /* SignFormCell.swift in Sources */,
 				F28ED1752A4DA2310029236F /* AppDelegate.swift in Sources */,
 				F28ED1902A4DDE030029236F /* Message.swift in Sources */,
+				F2AAEBD72A50D5BB0097C9CA /* Constants.swift in Sources */,
 				F28ED1942A4DDE6F0029236F /* ChatCell.swift in Sources */,
+				F2AAEBDC2A50E2F20097C9CA /* FirebaseUserListener.swift in Sources */,
+				F2AAEBD52A50D2A20097C9CA /* User.swift in Sources */,
+				F2AAEBD92A50E0F40097C9CA /* FCollectionRef.swift in Sources */,
 				F28ED19A2A4DE32E0029236F /* ChatRoomVC.swift in Sources */,
 				F28ED18E2A4DDDE20029236F /* Room.swift in Sources */,
 				F28ED1772A4DA2310029236F /* SceneDelegate.swift in Sources */,

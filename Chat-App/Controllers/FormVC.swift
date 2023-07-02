@@ -19,6 +19,10 @@ class FormVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         formCollectionView.delegate = self
         formCollectionView.dataSource = self
         
+        let topColor: UIColor = #colorLiteral(red: 0.4058305323, green: 0.421577245, blue: 0.4213043451, alpha: 0.8024166688)
+        let bottomColor: UIColor = #colorLiteral(red: 0.8960054517, green: 0.9188720584, blue: 0.9184731841, alpha: 0.8024166688)
+        self.view.setGradientBackground(colorTop: topColor, colorBottom: bottomColor)
+        
     }
       
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
